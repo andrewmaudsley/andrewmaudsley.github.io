@@ -3,7 +3,7 @@ Personal Site
 
 Currently in development using:
 
-* [http://jekyllrb.com/ "Jekyll"]
-* [https://pages.github.com/ "GitHub Pages"]
-* [http://getbootstrap.com/ "Bootstrap"]
-* [http://sass-lang.com/ "SASS"]
+* [Jekyll](http://jekyllrb.com/)
+* [GitHub Pages](https://pages.github.com/)
+* [Bootstrap](http://getbootstrap.com/)
+* [SASS](http://sass-lang.com/)
