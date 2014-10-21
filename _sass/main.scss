@@ -1,0 +1,94 @@
+$mellow-blue: #50657F;
+$dark-blue: #294F7F;
+$mid-blue: #427FCC;
+$light-blue: #BED5F0;
+$lightest-blue: #DAE2EC;
+$cool-blue: #7094B3;
+$white: #fff;
+
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-color: $lightest-blue;
+}
+
+a {
+	text-decoration: none;
+	color: $dark-blue;
+}
+
+a:hover, a:focus {
+	@extend a;
+}
+
+h1 {
+	color: $mellow-blue;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 25px;
+	margin-top: 40px;
+}
+
+h1 a {
+	color: $mellow-blue;
+}
+
+h2 {
+	color: $cool-blue;
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 5px;
+
+	span {
+
+	}
+
+	svg {
+		width: 16px;
+	}
+}
+
+h3 {
+	@extend h2;
+	font-size: 20px;
+}
+
+p {
+	color: $mellow-blue;
+}
+
+.col-xs-12 {
+	text-align: center;
+}
+
+.title-icon {
+	fill: $cool-blue;
+}
+
+.footer {
+
+	margin-top: 25px;
+
+	.list-unstyled {
+		display: inline-block;
+	}
+
+	svg {
+		width: 30px;
+	}
+
+	li {
+		float: left;
+		margin: 0 15px 0 0;
+	}
+
+	a .icon {
+		fill: $mellow-blue;
+	}
+
+	a:hover .icon {
+		fill: $cool-blue;
+	}
+}
