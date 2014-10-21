@@ -49,7 +49,7 @@ p {
   .footer li {
     float: left;
     margin: 0 15px 0 0; }
-  .footer a .icon {
+  .footer a .icon, .footer a:active .icon, .footer a:visited .icon {
     fill: #50657F; }
   .footer a:hover .icon {
     fill: #7094B3; }

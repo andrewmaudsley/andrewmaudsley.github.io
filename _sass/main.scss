@@ -47,6 +47,7 @@ h2 {
 
 	svg {
 		width: 16px;
+		height: 16px;
 	}
 }
 
@@ -76,7 +77,8 @@ p {
 	}
 
 	svg {
-		width: 30px;
+		width: 40px;
+		height: 40px;
 	}
 
 	li {
@@ -84,8 +86,10 @@ p {
 		margin: 0 15px 0 0;
 	}
 
-	a .icon {
-		fill: $mellow-blue;
+	a, a:active, a:visited {
+		.icon {
+			fill: $mellow-blue;
+		}
 	}
 
 	a:hover .icon {
