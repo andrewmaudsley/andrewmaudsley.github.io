@@ -24,7 +24,8 @@ h2, h3 {
   margin-top: 0;
   margin-bottom: 5px; }
   h2 svg, h3 svg {
-    width: 16px; }
+    width: 16px;
+    height: 16px; }
 
 h3 {
   font-size: 20px; }
@@ -43,7 +44,8 @@ p {
   .footer .list-unstyled {
     display: inline-block; }
   .footer svg {
-    width: 30px; }
+    width: 30px;
+    height: 30px; }
   .footer li {
     float: left;
     margin: 0 15px 0 0; }
