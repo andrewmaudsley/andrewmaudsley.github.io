@@ -1,5 +1,4 @@
-Personal Site
-=============
+# Personal Site
 
 Currently in development using:
 
