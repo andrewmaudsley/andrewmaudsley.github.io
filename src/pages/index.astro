@@ -1,227 +1,274 @@
 ---
-const skills = [
-  'Product strategy',
-  'Prototyping',
-  'TypeScript',
-  'React',
-  'Design systems',
-  'AI tooling',
-  'User research',
-  'Shipping fast',
-];
+const email = 'andrew@andrewmaudsley.com';
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Andrew Maudsley — Product Engineer building thoughtful software." />
+    <meta
+      name="description"
+      content="Andrew Maudsley — Product Engineer building a frontier AI product for private clinicians."
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
     <title>Andrew Maudsley — Product Engineer</title>
-  </head>
-  <body>
-    <main>
-      <header class="hero">
-        <h1>Andrew Maudsley</h1>
-        <p class="role">Product Engineer</p>
-        <p class="lede">
-          I design and build software that feels obvious. Equal parts product
-          thinking, design sense and engineering — shipping useful things end to end.
-        </p>
-        <nav class="nav">
-          <a href="#about" class="pill">About</a>
-          <a href="#contact" class="pill">Contact</a>
-        </nav>
-      </header>
-
-      <section id="about" class="section">
-        <h2>About</h2>
-        <p>
-          I've spent the last decade making digital products — moving between
-          design, code and product strategy depending on what the work needs.
-          I like small teams, sharp problems and shipping early.
-        </p>
-        <p>
-          Lately I'm focused on AI-native tools, learning experiences for kids,
-          and the quiet craft of interfaces that get out of the way.
-        </p>
-        <ul class="pills" aria-label="Skills">
-          {skills.map((s) => <li class="pill pill--soft">{s}</li>)}
-        </ul>
-      </section>
-
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
-          The best way to reach me is by email. I read everything and reply to most.
-        </p>
-        <div class="contact">
-          <a class="pill pill--mint" href="mailto:andrew@andrewmaudsley.com">
-            andrew@andrewmaudsley.com
-          </a>
-          <a class="pill" href="https://github.com/andrewmaudsley" rel="me">GitHub</a>
-          <a class="pill" href="https://www.linkedin.com/in/andrewmaudsley" rel="me">LinkedIn</a>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <span>© {new Date().getFullYear()} Andrew Maudsley</span>
-      </footer>
-    </main>
-
     <style is:global>
       :root {
-        --bg: #fbf8f3;
-        --surface: #ffffff;
-        --ink: #1f2430;
-        --ink-soft: #5b6172;
-        --line: #ece7dd;
+        --bg: #f6f3ec;
+        --surface: #ede9df;
+        --ink: #1f2420;
+        --ink-soft: #5b615b;
+        --ink-mute: #8a8f87;
+        --rule: #dfdacd;
 
-        --accent: #ff7a59;     /* warm coral */
-        --accent-soft: #ffe6dd;
-        --mint: #7bc6a4;
-        --mint-soft: #dff2e8;
-        --sky: #8aa9e6;
-        --sky-soft: #e2ebfb;
-        --sun: #f6c453;
-        --sun-soft: #fbeccd;
+        --accent: #5a6a4a;
+        --accent-soft: #d2d6c4;
+        --accent-hover: #bfc6ad;
+        --accent-deep: #3d4a30;
 
-        --radius: 999px;
-        --radius-card: 18px;
-
-        --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-          "Inter", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --serif: 'Source Serif 4', Georgia, serif;
+        --sans: 'Inter Tight', ui-sans-serif, system-ui, sans-serif;
+        --mono: 'JetBrains Mono', ui-monospace, monospace;
+        --maxw: 640px;
+        --gap-y: 56px;
       }
 
       * { box-sizing: border-box; }
-
-      html, body {
-        margin: 0;
-        padding: 0;
+      html, body { margin: 0; padding: 0; }
+      body {
         background: var(--bg);
         color: var(--ink);
-        font-family: var(--font-sans);
-        font-size: 17px;
-        line-height: 1.6;
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.55;
         -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: "ss01", "cv11";
       }
-
-      main {
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 64px 24px 96px;
-      }
-
-      h1, h2, h3 { color: var(--ink); letter-spacing: -0.01em; }
-      h1 { font-size: 2.4rem; margin: 16px 0 4px; line-height: 1.1; }
-      h2 { font-size: 1.25rem; margin: 0 0 16px; }
-      h3 { font-size: 1.05rem; margin: 0; }
-      p  { margin: 0 0 14px; color: var(--ink-soft); }
 
       a { color: inherit; text-decoration: none; }
+      ::selection { background: var(--accent); color: var(--bg); }
 
-      .hero { margin-bottom: 56px; }
-      .role {
-        margin: 0 0 16px;
+      .page {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: clamp(48px, 9vw, 96px) 28px clamp(64px, 10vw, 120px);
+      }
+
+      header.intro { margin-bottom: var(--gap-y); }
+
+      .name {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(34px, 5vw, 44px);
+        line-height: 1.0;
+        letter-spacing: -0.015em;
+        margin: 0 0 10px;
         color: var(--ink);
+      }
+      .meta-line {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--sans);
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: var(--ink-soft);
         font-weight: 500;
+        margin: 0 0 28px;
       }
-      .lede { font-size: 1.05rem; max-width: 56ch; }
-
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 24px;
+      .meta-line .dot {
+        width: 6px; height: 6px; border-radius: 50%;
+        background: var(--accent);
+        display: inline-block;
       }
-
-      .section {
-        padding: 32px 0;
-        border-top: 1px solid var(--line);
+      .lede {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: clamp(18px, 2.2vw, 21px);
+        line-height: 1.45;
+        color: var(--ink);
+        margin: 0 0 28px;
+        max-width: 26em;
+        text-wrap: balance;
+        hyphens: none;
       }
 
       .pill {
         display: inline-flex;
         align-items: center;
-        padding: 6px 14px;
-        border-radius: var(--radius);
-        background: var(--surface);
-        border: 0;
-        font-size: 0.9rem;
-        color: var(--ink);
-        transition: background 120ms ease;
-      }
-      a.pill:hover { background: #f3eee5; }
-
-      .pill--soft   { background: var(--sky-soft);  color: #2c3e6b; }
-      .pill--mint   { background: var(--mint-soft); color: #2f6b51; }
-      a.pill--mint:hover { background: #cfe8dc; }
-
-      .pills {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px 8px;
-      }
-      .pills .pill {
-        padding: 0;
-        font-size: 0.85rem;
+        gap: 6px;
+        padding: 7px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--rule);
         background: transparent;
-        color: var(--ink-soft);
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--accent);
+        font-family: var(--sans);
+        font-weight: 500;
+        cursor: pointer;
+        transition: border-color .2s ease, color .2s ease, background .2s ease, opacity .2s ease;
       }
-      .pills .pill::after {
-        content: '·';
-        margin-left: 8px;
-        color: var(--line);
+      .pill:hover { border-color: var(--accent); }
+      .pill[data-primary] {
+        background: var(--accent);
+        border: 1px solid var(--accent);
+        color: var(--bg);
       }
-      .pills .pill:last-child::after { content: ''; }
+      .pill[data-primary]:hover {
+        background: var(--accent-deep);
+        border-color: var(--accent-deep);
+        color: var(--bg);
+      }
 
-      .work {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 12px;
+      hr.rule {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: var(--gap-y) 0;
+        max-width: 100%;
       }
-      .work__item {
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-card);
-        padding: 18px 20px;
-      }
-      .work__head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 6px;
-      }
-      .work__item p { margin: 0; }
 
-      .contact {
+      section h2 {
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: 22px;
+        letter-spacing: -0.005em;
+        color: var(--ink);
+        margin: 0 0 18px;
+      }
+
+      section p {
+        margin: 0 0 14px;
+        color: var(--ink);
+        max-width: 34em;
+        text-wrap: pretty;
+      }
+
+      .contact-row {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-top: 4px;
-      }
-
-      .footer {
-        margin-top: 56px;
-        padding-top: 24px;
-        border-top: 1px solid var(--line);
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.85rem;
-        color: var(--ink-soft);
+        margin-top: 14px;
       }
 
       @media (max-width: 520px) {
-        h1 { font-size: 2rem; }
-        main { padding: 40px 20px 72px; }
-        .footer { flex-direction: column; gap: 6px; }
+        .contact-row {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .contact-row .pill {
+          width: 100%;
+          justify-content: center;
+          padding: 12px 14px;
+        }
+        #contact + hr.rule { margin-top: calc(var(--gap-y) + 16px); }
+      }
+
+      footer.foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 16px;
+        font-size: 12.5px;
+        color: var(--ink-mute);
+        font-family: var(--sans);
       }
     </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <h1 class="name">Andrew Maudsley</h1>
+        <div class="meta-line">
+          <span>Product Engineer</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span>London</span>
+        </div>
+        <p class="lede">
+          I love the craft. Shaping experiences, solving problems<br />
+          — building products people want.
+        </p>
+      </header>
+
+      <hr class="rule" />
+
+      <section id="about">
+        <h2>What I'm building</h2>
+        <p>A frontier AI product for private clinicians.</p>
+      </section>
+
+      <hr class="rule" />
+
+      <section id="how">
+        <h2>How I'm building</h2>
+        <p>
+          I lean into AI engineering and design workflows to move fast, affording
+          more time to invest in cx, relationships and problem solving.
+        </p>
+        <p>
+          I design for trust — interfaces that feel inviting, calm and
+          considered.
+        </p>
+      </section>
+
+      <hr class="rule" />
+
+      <section id="work">
+        <h2>Who I've worked with</h2>
+        <p>BCG Digital Ventures, NYSE, John Lewis and Partners, E.ON Next.</p>
+      </section>
+
+      <hr class="rule" />
+
+      <section id="contact">
+        <h2>Say hello</h2>
+        <p>Email is best — I read everything and reply to most.</p>
+        <div class="contact-row">
+          <button class="pill" data-primary id="emailBtn" type="button">
+            <span id="emailLabel">{email}</span>
+          </button>
+          <a
+            href="https://github.com/andrewmaudsley"
+            class="pill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/andrewmaudsley"
+            class="pill"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn</a>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <footer class="foot">
+        <div>© {new Date().getFullYear()} Andrew Maudsley</div>
+      </footer>
+    </main>
+
+    <script is:inline define:vars={{ email }}>
+      const btn = document.getElementById('emailBtn');
+      const label = document.getElementById('emailLabel');
+      const original = email;
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(original);
+          label.textContent = 'Copied to clipboard ✓';
+          setTimeout(() => { label.textContent = original; }, 1600);
+        } catch {
+          window.location.href = 'mailto:' + original;
+        }
+      });
+    </script>
   </body>
 </html>
