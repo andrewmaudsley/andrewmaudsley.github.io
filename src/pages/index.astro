@@ -146,16 +146,16 @@ const skills = [
         padding: 6px 14px;
         border-radius: var(--radius);
         background: var(--surface);
-        border: 1px solid var(--line);
+        border: 0;
         font-size: 0.9rem;
         color: var(--ink);
-        transition: transform 120ms ease, background 120ms ease;
+        transition: background 120ms ease;
       }
-      a.pill:hover { transform: translateY(-1px); background: #fffdf8; }
+      a.pill:hover { background: #f3eee5; }
 
-      .pill--soft   { background: var(--sky-soft);  border-color: transparent; color: #2c3e6b; }
-      .pill--mint   { background: var(--mint-soft); border-color: transparent; color: #2f6b51; }
-      .pill--accent { background: var(--accent-soft); border-color: transparent; color: #9c3b22; }
+      .pill--soft   { background: var(--sky-soft);  color: #2c3e6b; }
+      .pill--mint   { background: var(--mint-soft); color: #2f6b51; }
+      a.pill--mint:hover { background: #cfe8dc; }
 
       .pills {
         list-style: none;
@@ -163,8 +163,20 @@ const skills = [
         margin: 20px 0 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px 8px;
       }
+      .pills .pill {
+        padding: 0;
+        font-size: 0.85rem;
+        background: transparent;
+        color: var(--ink-soft);
+      }
+      .pills .pill::after {
+        content: '·';
+        margin-left: 8px;
+        color: var(--line);
+      }
+      .pills .pill:last-child::after { content: ''; }
 
       .work {
         list-style: none;
